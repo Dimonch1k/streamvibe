@@ -1,6 +1,6 @@
 'use client'
 
-import { FaqSection } from '@/components/sections/home'
+// import { FaqSection } from '@/components/sections/home'
 import { PageContainer } from '@/components/shared/PageContainer'
 import { PageHeader } from '@/components/shared/PageHeader'
 import { PricingSection } from '@/components/shared/pricing/PricingSection'
@@ -18,7 +18,7 @@ export function Pricing() {
 				hasDescription={false}
 				headerClassName='flex justify-center'
 			/>
-			<FaqSection />
+			{/* <FaqSection /> */}
 		</PageContainer>
 	)
 }

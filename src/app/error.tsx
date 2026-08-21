@@ -23,21 +23,15 @@ export default function Error({ reset }: { reset: () => void }) {
 
 			<div className='mt-8 flex flex-col sm:flex-row gap-4'>
 				<Button
-					type='button'
-					variant='outline'
 					onClick={reset}
-					className='border-orange-50 text-orange-50 hover:bg-orange-50 hover:text-grey-15 transition-colors flex items-center gap-2 px-6 py-3 rounded-xl shadow-lg'
+					variant='secondary'
 				>
 					<RefreshCcw size={18} />
 					Try Again
 				</Button>
 
 				<Link href={ROUTES.HOME}>
-					<Button
-						type='button'
-						variant='outline'
-						className='border-orange-50 text-orange-50 hover:bg-orange-50 hover:text-grey-15 transition-colors flex items-center gap-2 px-6 py-3 rounded-xl shadow-lg'
-					>
+					<Button variant='secondary'>
 						<Home size={18} />
 						Go Home
 					</Button>

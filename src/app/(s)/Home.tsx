@@ -5,6 +5,8 @@ import { HeroSection } from '@/components/sections/home'
 import { DevicesSection } from '@/components/sections/home/devices/devices-section'
 
 export function Home() {
+	throw new Error('Test error')
+
 	return (
 		<>
 			<HeroSection />

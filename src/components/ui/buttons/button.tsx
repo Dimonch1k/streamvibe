@@ -39,9 +39,9 @@ export const Button: React.FC<ButtonProps> = ({
 
 	// Variant Classes
 	const variantClasses = {
-		default: 'bg-black-10 text-white ring ring-black-10',
-		primary: 'bg-red-45 text-white ring ring-red-45',
-		secondary: 'bg-black-08 text-white ring ring-black-15',
+		default: 'bg-black-10 hover:bg-black-15 text-white ring ring-black-10',
+		primary: 'bg-red-45 hover:bg-red-50 text-white ring ring-red-45',
+		secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
 		ghost: 'bg-transparent text-white hover:text-red-45',
 		none: ''
 	}

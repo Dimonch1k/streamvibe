@@ -1,0 +1,69 @@
+import { ForwardedRef, ReactNode } from 'react'
+
+import { cn } from '@/lib/utils/cn'
+
+export interface ButtonProps {
+	children: ReactNode
+	type?: 'button' | 'submit' | 'reset'
+	size?: 'default' | 'primary' | 'secondary' | 'none'
+	variant?: 'default' | 'primary' | 'secondary' | 'ghost' | 'none'
+	startIcon?: ReactNode
+	endIcon?: ReactNode
+	onClick?: () => void
+	disabled?: boolean
+	className?: string
+	title?: string
+	ref?: ForwardedRef<HTMLButtonElement>
+}
+
+export const Button: React.FC<ButtonProps> = ({
+	children,
+	type = 'button',
+	size = 'default',
+	variant = 'default',
+	startIcon,
+	endIcon,
+	onClick,
+	className = '',
+	disabled = false,
+	title,
+	ref
+}) => {
+	// Size Classes
+	const sizeClasses = {
+		default: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+		primary: 'px-6 py-3.5 gap-1 text-sm 2xl:text-lg',
+		secondary: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+		none: ''
+	}
+
+	// Variant Classes
+	const variantClasses = {
+		default: 'bg-black-10 text-white ring ring-black-10',
+		primary: 'bg-red-45 text-white ring ring-red-45',
+		secondary: 'bg-black-08 text-white ring ring-black-15',
+		ghost: 'bg-transparent text-white hover:text-red-45',
+		none: ''
+	}
+
+	return (
+		<button
+			className={cn(
+				'w-fit flex items-center justify-center font-semibold gap-2 rounded-md md:rounded-lg transition-colors duration-200 ease-linear cursor-pointer text-sm 2xl:text-lg leading-[150%]',
+				sizeClasses[size],
+				variantClasses[variant],
+				className,
+				disabled ? 'cursor-not-allowed opacity-50' : ''
+			)}
+			onClick={onClick}
+			disabled={disabled}
+			type={type}
+			title={title}
+			ref={ref}
+		>
+			{startIcon && <span className='flex items-center'>{startIcon}</span>}
+			{children}
+			{endIcon && <span className='flex items-center'>{endIcon}</span>}
+		</button>
+	)
+}

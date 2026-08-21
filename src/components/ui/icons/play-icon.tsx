@@ -1,0 +1,26 @@
+'use client'
+
+export interface PlayIconProps {
+	color: string
+	className?: string
+}
+
+export function PlayIcon({ color, className }: PlayIconProps) {
+	return (
+		<svg
+			width='28'
+			height='28'
+			viewBox='0 0 28 28'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+			className={className}
+		>
+			<path
+				fillRule='evenodd'
+				clipRule='evenodd'
+				d='M5.25 6.59491C5.25 4.93109 7.03383 3.87636 8.4917 4.67819L21.9557 12.0834C23.4668 12.9145 23.4668 15.0858 21.9557 15.9168L8.4917 23.322C7.03383 24.1239 5.25 23.0691 5.25 21.4053V6.59491Z'
+				fill={color}
+			/>
+		</svg>
+	)
+}

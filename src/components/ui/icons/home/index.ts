@@ -1,0 +1,6 @@
+export { GamingConsolesIcon } from './gaming-consoles-icon'
+export { LaptopsIcon } from './laptops-icon'
+export { SmartTvIcon } from './smart-tv-icon'
+export { SmartphonesIcon } from './smartphones-icon'
+export { TabletIcon } from './tablet-icon'
+export { VrHeadsetsIcon } from './vr-headsets-icon'

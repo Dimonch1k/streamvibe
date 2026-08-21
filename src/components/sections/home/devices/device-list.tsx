@@ -1,13 +1,13 @@
 'use client'
 
-import type { IAboutItem } from '@/types/sections/about.interface'
+import type { IDeviceItem } from '@/types/sections/device.interface'
 
 import { cn } from '@/lib/utils'
 
 import { DeviceListItem } from './device-list-item'
 
 export interface DeviceListProps {
-	list: IAboutItem[]
+	list: IDeviceItem[]
 	className?: string
 }
 

@@ -7,12 +7,12 @@ import {
 	VrHeadsetsIcon
 } from '@/components/ui/icons/home'
 
-import type { IDevice } from '@/types/sections/home.interface'
+import type { IDeviceItem } from '@/types/sections/device.interface'
 
 const deviceColor = '#e50000'
 const deviceIconClassName = 'size-6 lg:size-7.5 2xl:size-10'
 
-export const devicesListData: IDevice[] = [
+export const devicesListData: IDeviceItem[] = [
 	{
 		icon: (
 			<SmartphonesIcon

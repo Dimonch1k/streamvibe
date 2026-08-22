@@ -8,16 +8,17 @@ export interface ArrowRightIconProps {
 export function ArrowRightIcon({ color, className }: ArrowRightIconProps) {
 	return (
 		<svg
-			width='14'
-			height='13'
-			viewBox='0 0 14 13'
+			width='30'
+			height='30'
+			viewBox='0 0 30 30'
 			fill='none'
 			xmlns='http://www.w3.org/2000/svg'
 			className={className}
 		>
 			<path
-				d='M0.5 6.125L13 6.125M7.375 11.75L13 6.125L7.375 0.5'
+				d='M5.625 15L24.375 15M15.9375 23.4375L24.375 15L15.9375 6.5625'
 				stroke={color}
+				strokeWidth='2'
 				strokeLinecap='round'
 				strokeLinejoin='round'
 			/>

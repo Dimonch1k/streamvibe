@@ -1,5 +1,3 @@
-'use client'
-
 import { footerBottomLinks } from '@/data/footer.data'
 
 import { FooterLink } from './footer-link'

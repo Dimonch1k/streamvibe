@@ -5,11 +5,11 @@ import { cn } from '@/lib/utils/cn'
 export interface ButtonProps {
 	children: ReactNode
 	type?: 'button' | 'submit' | 'reset'
-	size?: 'default' | 'primary' | 'secondary' | 'none'
+	size?: 'default' | 'primary' | 'secondary' | 'square' | 'none'
 	variant?: 'default' | 'primary' | 'secondary' | 'ghost' | 'none'
 	startIcon?: ReactNode
 	endIcon?: ReactNode
-	onClick?: () => void
+	onClick?: (e?: React.MouseEvent) => void
 	disabled?: boolean
 	className?: string
 	title?: string
@@ -34,6 +34,7 @@ export const Button: React.FC<ButtonProps> = ({
 		default: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
 		primary: 'px-6 py-3.5 gap-1 text-sm 2xl:text-lg',
 		secondary: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+		square: 'p-2.5 2xl:p-3.5',
 		none: ''
 	}
 
@@ -43,8 +44,7 @@ export const Button: React.FC<ButtonProps> = ({
 			'bg-black-10 hover:bg-black-15 text-white ring ring-black-10 hover:ring-black-15',
 		primary:
 			'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
-		secondary:
-			'bg-black-08 hover:bg-black-15 text-white ring ring-black-15 hover:ring-black-15',
+		secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
 		ghost: 'bg-transparent text-white hover:text-red-45',
 		none: ''
 	}
@@ -52,7 +52,7 @@ export const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={cn(
-				'w-fit flex items-center justify-center font-semibold gap-2 rounded-md md:rounded-lg transition-colors duration-200 ease-linear cursor-pointer text-sm 2xl:text-lg leading-[150%] shrink-0',
+				'w-fit flex items-center justify-center font-semibold gap-2 rounded-md md:rounded-lg transition-all duration-200 ease-linear cursor-pointer text-sm 2xl:text-lg leading-[150%] text-nowrap',
 				sizeClasses[size],
 				variantClasses[variant],
 				className,

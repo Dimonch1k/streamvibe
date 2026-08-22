@@ -1,5 +1,3 @@
-'use client'
-
 import type { ICategoryItem } from '@/types/sections/category.interface'
 
 import { cn } from '@/lib/utils'

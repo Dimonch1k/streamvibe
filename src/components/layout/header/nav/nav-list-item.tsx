@@ -20,7 +20,8 @@ export function NavListItem({ item, isActive, closeMenu }: NavListItemProps) {
 	return (
 		<li>
 			<Button
-				onClick={() => {
+				onClick={(e?: React.MouseEvent) => {
+					e?.stopPropagation()
 					router.push(item.href)
 					closeMenu?.()
 				}}

@@ -75,7 +75,10 @@ export function Header() {
 
 				{/* Mobile Menu */}
 				{isMobileMenuOpen && (
-					<div className='absolute top-20 md:hidden w-full py-2'>
+					<div
+						ref={mobileMenuRef}
+						className='absolute top-20 md:hidden w-full py-2'
+					>
 						<div className='max-w-400 mx-auto px-4'>
 							<NavList
 								list={navItemsData}

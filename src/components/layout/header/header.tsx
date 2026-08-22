@@ -33,7 +33,7 @@ export function Header() {
 	return (
 		<>
 			{/* Sticky navigation */}
-			<header className='sticky top-0 z-50 w-full'>
+			<header className='sticky top-0 z-50 w-full bg-linear-to-b from-black-08 to-black-08/0'>
 				<div className='relative px-6 py-4 lg:px-20 lg:py-6 2xl:px-40.5 2xl:py-7.5'>
 					{/* Desktop Navigation */}
 					<div className='hidden md:flex w-full max-w-400 mx-auto'>

@@ -39,9 +39,12 @@ export const Button: React.FC<ButtonProps> = ({
 
 	// Variant Classes
 	const variantClasses = {
-		default: 'bg-black-10 hover:bg-black-15 text-white ring ring-black-10',
-		primary: 'bg-red-45 hover:bg-red-50 text-white ring ring-red-45',
-		secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
+		default:
+			'bg-black-10 hover:bg-black-15 text-white ring ring-black-10 hover:ring-black-15',
+		primary:
+			'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
+		secondary:
+			'bg-black-08 hover:bg-black-15 text-white ring ring-black-15 hover:ring-black-15',
 		ghost: 'bg-transparent text-white hover:text-red-45',
 		none: ''
 	}
@@ -49,7 +52,7 @@ export const Button: React.FC<ButtonProps> = ({
 	return (
 		<button
 			className={cn(
-				'w-fit flex items-center justify-center font-semibold gap-2 rounded-md md:rounded-lg transition-colors duration-200 ease-linear cursor-pointer text-sm 2xl:text-lg leading-[150%]',
+				'w-fit flex items-center justify-center font-semibold gap-2 rounded-md md:rounded-lg transition-colors duration-200 ease-linear cursor-pointer text-sm 2xl:text-lg leading-[150%] shrink-0',
 				sizeClasses[size],
 				variantClasses[variant],
 				className,

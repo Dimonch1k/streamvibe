@@ -74,7 +74,7 @@ export function Section({
 			)}
 
 			{/* Section children */}
-			{title || description || headerChildren ? (
+			{(title || description || headerChildren) && childrenClassName ? (
 				<div className={childrenClassName}>{children}</div>
 			) : (
 				children

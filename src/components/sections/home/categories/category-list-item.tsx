@@ -16,7 +16,7 @@ export interface CategoryListItemProps {
 
 export function CategoryListItem({ item, className }: CategoryListItemProps) {
 	return (
-		<li>
+		<li className='w-full'>
 			<Link
 				href={item.href}
 				className={cn(

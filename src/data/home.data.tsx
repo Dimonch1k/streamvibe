@@ -113,36 +113,51 @@ export const devicesListData: IDeviceItem[] = [
 
 export const faqListData: IFaqItem[] = [
 	{
+		number: 1,
 		question: 'What is StreamVibe?',
 		answer:
 			'StreamVibe is a streaming service that allows you to watch movies and shows on demand.'
 	},
 	{
+		number: 2,
 		question: 'How much does StreamVibe cost?',
-		answer: ''
+		answer:
+			'StreamVibe offers several pricing plans to suit your needs. You can find detailed information about our pricing on our website.'
 	},
 	{
+		number: 3,
 		question: 'What content is available on StreamVibe?',
-		answer: ''
+		answer:
+			'StreamVibe offers a wide range of movies and shows, including popular titles and exclusive content.'
 	},
 	{
+		number: 4,
 		question: 'How can I watch StreamVibe?',
-		answer: ''
+		answer:
+			'You can watch StreamVibe on any device with an internet connection, including smartphones, tablets, smart TVs, and computers.'
 	},
 	{
+		number: 5,
 		question: 'How do I sign up for StreamVibe?',
-		answer: ''
+		answer:
+			'You can sign up for StreamVibe by visiting our website and creating an account.'
 	},
 	{
+		number: 6,
 		question: 'What is the StreamVibe free trial?',
-		answer: ''
+		answer:
+			'StreamVibe offers a free trial so you can try our service before committing to a paid plan.'
 	},
 	{
+		number: 7,
 		question: 'How do I contact StreamVibe customer support?',
-		answer: ''
+		answer:
+			'You can contact StreamVibe customer support by visiting our website and creating an account.'
 	},
 	{
+		number: 8,
 		question: 'What are the StreamVibe payment methods?',
-		answer: ''
+		answer:
+			'StreamVibe accepts various payment methods, including credit cards, debit cards, and digital wallets.'
 	}
 ]

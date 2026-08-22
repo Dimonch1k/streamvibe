@@ -4,6 +4,7 @@
 	--white: #fff;
 	--black: #000;
 
+	--red-30: #b30000;
 	--red-45: #e50000;
 	--red-50: #ff0000;
 	--red-55: #ff1919;
@@ -36,6 +37,7 @@
 	--color-white: var(--white);
 	--color-black: var(--black);
 
+	--color-red-30: var(--red-30);
 	--color-red-45: var(--red-45);
 	--color-red-50: var(--red-50);
 	--color-red-55: var(--red-55);
@@ -67,10 +69,6 @@
 
 	--font-inter: var(--font-inter), 'Inter', sans-serif;
 	--font-manrope: var(--font-manrope), 'Manrope', sans-serif;
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 body {

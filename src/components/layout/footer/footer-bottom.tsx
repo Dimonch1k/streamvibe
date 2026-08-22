@@ -18,7 +18,7 @@ export function FooterBottom() {
 					{footerBottomLinks.map((item, index) => (
 						<li
 							key={index}
-							className='flex px-5'
+							className='flex px-2 xs:px-5'
 						>
 							<FooterLink
 								href={item.href}

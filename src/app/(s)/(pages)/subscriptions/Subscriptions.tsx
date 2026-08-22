@@ -1,5 +1,9 @@
-import { cn } from '@/lib/utils'
+import { PricingSection } from '@/components/shared/pricing/pricing-section'
 
 export function Subscriptions() {
-	return <div className={cn('')}>Subscriptions</div>
+	return (
+		<>
+			<PricingSection />
+		</>
+	)
 }

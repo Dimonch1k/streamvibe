@@ -3,7 +3,7 @@ import { HeroSection } from '@/components/sections/home'
 import { CategoriesSection } from '@/components/sections/home/categories/categories-section'
 import { DevicesSection } from '@/components/sections/home/devices/devices-section'
 import { FaqSection } from '@/components/sections/home/faq/faq-section'
-import { PricingSection } from '@/components/sections/home/pricing/pricing-section'
+import { PricingSection } from '@/components/shared/pricing/pricing-section'
 
 export function Home() {
 	return (

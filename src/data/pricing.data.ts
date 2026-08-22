@@ -31,3 +31,42 @@ export const pricingListData: IPricing[] = [
 		pricePerYear: 149.99
 	}
 ]
+
+export const pricingComparisonTableData: {
+	columns: string[]
+	data: string[][]
+} = {
+	columns: ['Features', 'Basic', 'Standard', 'Premium'],
+	data: [
+		['Price', '$9.99', '$12.99', '$14.99'],
+		[
+			'Content',
+			'Access to a wide selection of movies and shows, including some new releases.',
+			'Access to a wider selection of movies and shows, including most new releases and exclusive content',
+			'Access to a widest selection of movies and shows, including all new releases and Offline Viewing'
+		],
+		[
+			'Devices',
+			'Watch on one device simultaneously',
+			'Watch on Two device simultaneously',
+			'Watch on Four device simultaneously'
+		],
+		['Free Trial', '7 Days', '7 Days', '7 Days'],
+		['Cancel Anytime', 'Yes', 'Yes', 'Yes'],
+		['HDR', 'No', 'Yes', 'Yes'],
+		['Dolby Atmos', 'No', 'Yes', 'Yes'],
+		['Ad - Free', 'No', 'Yes', 'Yes'],
+		[
+			'Offline Viewing',
+			'No',
+			'Yes, for select titles.',
+			'Yes, for all titles.'
+		],
+		[
+			'Family Sharing',
+			'No',
+			'Yes, up to 5 family members.',
+			'Yes, up to 6 family members.'
+		]
+	]
+}

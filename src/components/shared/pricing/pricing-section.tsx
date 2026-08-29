@@ -12,7 +12,11 @@ import { PricingComparisonTable } from './pricing-comparison-table'
 import { PricingList } from './pricing-list'
 import { PricingSelector } from './pricing-selector'
 
-export function PricingSection() {
+export interface PricingSectionProps {
+	hasTable?: boolean
+}
+
+export function PricingSection({ hasTable = true }: PricingSectionProps) {
 	const [pricingType, setPricingType] = useState<TypePricing>('month')
 
 	return (
@@ -32,7 +36,7 @@ export function PricingSection() {
 				pricingType={pricingType}
 			/>
 
-			<PricingComparisonTable />
+			{hasTable && <PricingComparisonTable pricingType={pricingType} />}
 		</Section>
 	)
 }

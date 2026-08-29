@@ -24,6 +24,7 @@ export function HeroSection() {
 				className='flex-1 w-full h-auto object-contain'
 				width={1920}
 				height={860}
+				draggable={false}
 			/>
 
 			<HeroText />

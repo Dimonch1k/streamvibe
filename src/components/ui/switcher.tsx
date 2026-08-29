@@ -9,11 +9,11 @@ import { SelectorContainer } from '@/components/ui/selector-container'
 
 import { cn } from '@/lib/utils'
 
-export interface CategorySwitcherProps {
+export interface SwitcherProps {
 	className?: string
 }
 
-export function CategorySwitcher({ className }: CategorySwitcherProps) {
+export function Switcher({ className }: SwitcherProps) {
 	const [activeIndex, setActiveIndex] = useState(0)
 
 	const prev = () => {

@@ -17,27 +17,27 @@ const deviceIconClassName = 'size-6 lg:size-7.5 2xl:size-10'
 export const categoriesListData: ICategoryItem[] = [
 	{
 		href: '#',
-		image: '/home/category-action.png',
+		image: '/categories/category-action.png',
 		title: 'Action'
 	},
 	{
 		href: '#',
-		image: '/home/category-adventure.png',
+		image: '/categories/category-adventure.png',
 		title: 'Adventure'
 	},
 	{
 		href: '#',
-		image: '/home/category-comedy.png',
+		image: '/categories/category-comedy.png',
 		title: 'Comedy'
 	},
 	{
 		href: '#',
-		image: '/home/category-drama.png',
+		image: '/categories/category-drama.png',
 		title: 'Drama'
 	},
 	{
 		href: '#',
-		image: '/home/category-horror.png',
+		image: '/categories/category-horror.png',
 		title: 'Horror'
 	}
 ]

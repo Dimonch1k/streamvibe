@@ -26,6 +26,7 @@ export function Logo({ closeMenu }: LogoProps) {
 					width={200}
 					height={60}
 					priority
+					draggable={false}
 				/>
 			)}
 			{screenType === 'laptop' && (
@@ -35,6 +36,7 @@ export function Logo({ closeMenu }: LogoProps) {
 					width={166}
 					height={50}
 					priority
+					draggable={false}
 				/>
 			)}
 			{screenType === 'mobile' && (
@@ -44,6 +46,7 @@ export function Logo({ closeMenu }: LogoProps) {
 					width={116}
 					height={35}
 					priority
+					draggable={false}
 				/>
 			)}
 		</Link>

@@ -1,5 +1,9 @@
-import { cn } from '@/lib/utils'
+import { FaqSection } from '@/components/shared/faq/faq-section'
 
 export function Support() {
-	return <div className={cn('')}>Support</div>
+	return (
+		<>
+			<FaqSection />
+		</>
+	)
 }

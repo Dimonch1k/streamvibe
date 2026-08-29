@@ -1,9 +1,23 @@
 import { Section } from '@/components/ui/section'
 import { Table } from '@/components/ui/table'
 
-import { pricingComparisonTableData } from '@/data/pricing.data'
+import {
+	pricingMonthlyComparisonTableData,
+	pricingYearlyComparisonTableData
+} from '@/data/pricing.data'
 
-export function PricingComparisonTable() {
+export interface PricingComparisonTableProps {
+	pricingType: 'month' | 'year'
+}
+
+export function PricingComparisonTable({
+	pricingType
+}: PricingComparisonTableProps) {
+	const tableData =
+		pricingType === 'month'
+			? pricingMonthlyComparisonTableData
+			: pricingYearlyComparisonTableData
+
 	return (
 		<Section
 			id='pricing-comparison-table'
@@ -11,8 +25,8 @@ export function PricingComparisonTable() {
 			description="StreamVibe offers three different plans to fit your needs: Basic, Standard, and Premium. Compare the features of each plan and choose the one that's right for you."
 		>
 			<Table
-				columns={pricingComparisonTableData.columns}
-				data={pricingComparisonTableData.data}
+				columns={tableData.columns}
+				data={tableData.data}
 			/>
 		</Section>
 	)

@@ -8,8 +8,8 @@ export interface TableProps {
 
 export function Table({ className, columns, data }: TableProps) {
 	return (
-		<div className={cn('overflow-x-auto', className)}>
-			<table className='min-w-full border-collapse text-left text-sm'>
+		<div className={cn('overflow-x-auto relative', className)}>
+			<table className='sticky top-0 min-w-full border-collapse text-left text-sm'>
 				<thead className='bg-black-06 font-semibold text-lg 2xl:text-xl text-white'>
 					<tr>
 						{columns.map(column => (

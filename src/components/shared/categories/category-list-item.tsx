@@ -32,17 +32,35 @@ export function CategoryListItem({ item, className }: CategoryListItemProps) {
 					width={235}
 					height={252}
 					className='w-full shrink-0!'
+					draggable={false}
 				/>
 
 				<div className='w-full flex justify-between'>
-					<h5
-						className={cn(
-							'text-white font-semibold leading-[150%]',
-							'text-sm lg:text-base 2xl:text-lg'
-						)}
-					>
-						{item.title}
-					</h5>
+					{item.badge ? (
+						<div className='flex-1 flex flex-col gap-1'>
+							<span className='w-fit h-fit text-xs lg:text-base 2xl:text-xl text-white bg-red-45 p-2.5 rounded font-semibold leading-[20%]'>
+								{item.badge}
+							</span>
+
+							<h5
+								className={cn(
+									'text-white font-semibold leading-[150%]',
+									'text-sm lg:text-base 2xl:text-lg'
+								)}
+							>
+								{item.title}
+							</h5>
+						</div>
+					) : (
+						<h5
+							className={cn(
+								'text-white font-semibold leading-[150%]',
+								'text-sm lg:text-base 2xl:text-lg'
+							)}
+						>
+							{item.title}
+						</h5>
+					)}
 
 					<ArrowRightIcon
 						color='white'

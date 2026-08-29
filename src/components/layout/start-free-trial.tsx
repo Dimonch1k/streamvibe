@@ -25,7 +25,7 @@ export function StartFreeTrial() {
 				<h2
 					className={cn(
 						'w-full font-bold leading-[150%]',
-						'text-2xl md:text-[28px] 2md:text-5xl'
+						'text-2xl lg:text-[28px] 2xl:text-5xl'
 					)}
 				>
 					Start your free trial today!
@@ -34,7 +34,7 @@ export function StartFreeTrial() {
 				<p
 					className={cn(
 						'w-full text-grey-60 leading-[150%]',
-						'text-sm md:text-base 2md:text-lg'
+						'text-sm lg:text-base 2xl:text-lg'
 					)}
 				>
 					This is a clear and concise call to action that encourages users to
@@ -57,6 +57,7 @@ export function StartFreeTrial() {
 					className='z-0 top-0 left-0 right-0 bottom-0 absolute flex-1 w-full h-full object-cover'
 					width={1600}
 					height={330}
+					draggable={false}
 				/>
 			) : (
 				<Image
@@ -66,6 +67,7 @@ export function StartFreeTrial() {
 					className='z-0 top-0 left-0 right-0 bottom-0 absolute flex-1 w-full h-full object-cover'
 					width={1400}
 					height={700}
+					draggable={false}
 				/>
 			)}
 		</div>

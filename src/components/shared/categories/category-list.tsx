@@ -17,10 +17,10 @@ export function CategoryList({ list, className }: CategoryListProps) {
 				className
 			)}
 		>
-			{list.map((achievement, index) => (
+			{list.map((item, index) => (
 				<CategoryListItem
 					key={index}
-					item={achievement}
+					item={item}
 				/>
 			))}
 		</ul>

@@ -1,7 +1,13 @@
 import { Gallery } from '@/components/ui/gallery'
 import { Legend } from '@/components/ui/legend'
 
-import { popularTopListData, showsListData } from '@/data/movies-and-shows.data'
+import {
+	showsGenresListData,
+	showsMustWatchListData,
+	showsPopularTopListData,
+	showsReleasesListData,
+	showsTrendingListData
+} from '@/data/movies-and-shows.data'
 
 export function ShowsSection() {
 	return (
@@ -9,23 +15,26 @@ export function ShowsSection() {
 			<Legend header='Shows'>
 				<Gallery
 					title='Our Genres'
-					listData={showsListData}
+					listData={showsGenresListData}
 				/>
 				<Gallery
 					title='Popular Top 10 In Genres'
-					listData={popularTopListData}
+					listData={showsPopularTopListData}
 				/>
 				<Gallery
 					title='Trending Shows Now'
-					listData={showsListData}
+					listData={showsTrendingListData}
+					itemType='compact'
 				/>
 				<Gallery
 					title='New Released Shows'
-					listData={showsListData}
+					listData={showsReleasesListData}
+					itemType='compact'
 				/>
 				<Gallery
 					title='Must - Watch Shows'
-					listData={showsListData}
+					listData={showsMustWatchListData}
+					itemType='compact'
 				/>
 			</Legend>
 		</>

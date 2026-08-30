@@ -2,8 +2,11 @@ import { Gallery } from '@/components/ui/gallery'
 import { Legend } from '@/components/ui/legend'
 
 import {
-	moviesListData,
-	popularTopListData
+	moviesGenresListData,
+	moviesMustWatchListData,
+	moviesPopularTopListData,
+	moviesReleasesListData,
+	moviesTrendingListData
 } from '@/data/movies-and-shows.data'
 
 export function MoviesSection() {
@@ -12,23 +15,26 @@ export function MoviesSection() {
 			<Legend header='Movies'>
 				<Gallery
 					title='Our Genres'
-					listData={moviesListData}
+					listData={moviesGenresListData}
 				/>
 				<Gallery
 					title='Popular Top 10 In Genres'
-					listData={popularTopListData}
+					listData={moviesPopularTopListData}
 				/>
 				<Gallery
 					title='Trending Now'
-					listData={moviesListData}
+					listData={moviesTrendingListData}
+					itemType='compact'
 				/>
 				<Gallery
 					title='New Releases'
-					listData={moviesListData}
+					listData={moviesReleasesListData}
+					itemType='compact'
 				/>
 				<Gallery
 					title='Must - Watch Movies'
-					listData={moviesListData}
+					listData={moviesMustWatchListData}
+					itemType='compact'
 				/>
 			</Legend>
 		</>

@@ -16,6 +16,26 @@ export interface ButtonProps {
 	ref?: ForwardedRef<HTMLButtonElement>
 }
 
+// Size Classes
+const sizeClasses = {
+	default: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+	primary: 'px-6 py-3.5 gap-1 text-sm 2xl:text-lg',
+	secondary: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+	square: 'p-2.5 2xl:p-3.5',
+	none: ''
+}
+
+// Variant Classes
+const variantClasses = {
+	default:
+		'bg-black-10 hover:bg-black-15 text-white ring ring-black-10 hover:ring-black-15',
+	primary:
+		'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
+	secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
+	ghost: 'bg-transparent text-white hover:text-red-45',
+	none: ''
+}
+
 export const Button: React.FC<ButtonProps> = ({
 	children,
 	type = 'button',
@@ -29,26 +49,6 @@ export const Button: React.FC<ButtonProps> = ({
 	title,
 	ref
 }) => {
-	// Size Classes
-	const sizeClasses = {
-		default: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
-		primary: 'px-6 py-3.5 gap-1 text-sm 2xl:text-lg',
-		secondary: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
-		square: 'p-2.5 2xl:p-3.5',
-		none: ''
-	}
-
-	// Variant Classes
-	const variantClasses = {
-		default:
-			'bg-black-10 hover:bg-black-15 text-white ring ring-black-10 hover:ring-black-15',
-		primary:
-			'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
-		secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
-		ghost: 'bg-transparent text-white hover:text-red-45',
-		none: ''
-	}
-
 	return (
 		<button
 			className={cn(

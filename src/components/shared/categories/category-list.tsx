@@ -6,10 +6,15 @@ import { CategoryListItem } from './category-list-item'
 
 export interface CategoryListProps {
 	list: ICategoryItem[]
+	itemType?: 'default' | 'compact'
 	className?: string
 }
 
-export function CategoryList({ list, className }: CategoryListProps) {
+export function CategoryList({
+	list,
+	itemType = 'default',
+	className
+}: CategoryListProps) {
 	return (
 		<ul
 			className={cn(
@@ -21,6 +26,7 @@ export function CategoryList({ list, className }: CategoryListProps) {
 				<CategoryListItem
 					key={index}
 					item={item}
+					isCompact={itemType === 'compact'}
 				/>
 			))}
 		</ul>

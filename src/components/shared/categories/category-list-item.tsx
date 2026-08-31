@@ -118,8 +118,8 @@ export function CategoryListItem({
 					)}
 
 					{item.releasedAt && (
-						<Badge>
-							Released at{' '}
+						<Badge className='gap-1'>
+							Released at
 							<span className='text-[#BFBFBF]'>{item.releasedAt}</span>
 						</Badge>
 					)}

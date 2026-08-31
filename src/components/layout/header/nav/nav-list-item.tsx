@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import type { INavItem } from '@/types/nav.interface'
 

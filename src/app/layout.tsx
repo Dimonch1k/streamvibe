@@ -1,8 +1,9 @@
 import './globals.css'
 
-import { Toaster } from 'react-hot-toast'
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
+
+import { Toaster } from '@/components/ui/sonner'
 
 import { SEO_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants'
 
@@ -53,7 +54,7 @@ export default function RootLayout({
 
 				{/* Toast notifications */}
 				<Toaster
-					position='top-right'
+					position='bottom-right'
 					toastOptions={{
 						duration: 4000
 					}}

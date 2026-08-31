@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 import { Section } from '@/components/ui/section'
 
 import { faqListData } from '@/data/home.data'

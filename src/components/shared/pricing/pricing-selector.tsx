@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 import { SelectorContainer } from '@/components/ui/selector-container'
 
 import { pricingSelectorsData } from '@/data/pricing.data'

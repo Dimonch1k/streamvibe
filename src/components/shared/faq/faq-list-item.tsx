@@ -2,7 +2,7 @@
 
 import { MinusIcon, PlusIcon } from 'lucide-react'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import type { IFaqItem } from '@/types/sections/faq.interface'
 

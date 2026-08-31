@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import type { IPricing, TypePricing } from '@/types/sections/pricing.interface'
 

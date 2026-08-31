@@ -3,7 +3,7 @@
 import { RefObject, useRef, useState } from 'react'
 import { Bell, Search } from 'lucide-react'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import { useClickOutside } from '@/hooks/useClickOutside'
 

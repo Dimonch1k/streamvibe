@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 import { ArrowRightIcon } from '@/components/ui/icons'
 import { ArrowLeftIcon } from '@/components/ui/icons/arrow-left-icon'
 import { SelectorContainer } from '@/components/ui/selector-container'

@@ -3,7 +3,7 @@
 import { Home, RefreshCcw } from 'lucide-react'
 import Link from 'next/link'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import { ROUTES } from '@/constants/routes.constants'
 

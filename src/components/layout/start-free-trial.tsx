@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 import { useScreenType } from '@/hooks/useScreenType'
 

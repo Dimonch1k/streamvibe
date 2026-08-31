@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { AlignRight, X } from 'lucide-react'
 
-import { Button } from '@/components/ui/buttons/button'
+import { Button } from '@/components/ui/button'
 
 export interface MobileMenuButtonProps {
 	isMenuOpen: boolean

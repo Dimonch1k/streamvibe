@@ -81,6 +81,7 @@ body {
 	flex-direction: column;
 	scroll-behavior: smooth;
 	position: relative;
+	box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: reduce) {

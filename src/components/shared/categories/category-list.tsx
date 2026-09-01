@@ -1,3 +1,7 @@
+'use client'
+
+import { useRef } from 'react'
+
 import type { ICategoryItem } from '@/types/sections/category.interface'
 
 import { cn } from '@/lib/utils'
@@ -8,15 +12,38 @@ export interface CategoryListProps {
 	list: ICategoryItem[]
 	itemType?: 'default' | 'compact'
 	className?: string
+	onPrev?: () => void
+	onNext?: () => void
 }
 
 export function CategoryList({
 	list,
 	itemType = 'default',
-	className
+	className,
+	onPrev,
+	onNext
 }: CategoryListProps) {
+	const scrollRef = useRef<HTMLUListElement>(null)
+
+	const scrollAmount = 300
+
+	const handlePrev = () => {
+		if (scrollRef.current) {
+			scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' })
+		}
+		onPrev?.()
+	}
+
+	const handleNext = () => {
+		if (scrollRef.current) {
+			scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+		}
+		onNext?.()
+	}
+
 	return (
 		<ul
+			ref={scrollRef}
 			className={cn(
 				'w-full flex gap-5 2xl:gap-7.5 overflow-x-scroll pb-3',
 				className

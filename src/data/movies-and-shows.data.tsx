@@ -1,4 +1,37 @@
 import type { ICategoryItem } from '@/types/sections/category.interface'
+import type { IHeroGalleryItem } from '@/types/sections/hero.interface'
+
+// ----------------- Movies -----------------
+export const heroGalleryListData: IHeroGalleryItem[] = [
+	{
+		href: '#',
+		image: '/movies-and-shows/hero/avengers.jpg',
+		title: 'Avengers: Endgame',
+		description:
+			"With the help of remaining allies, the Avengers must assemble once more in order to undo Thanos's actions and undo the chaos to the universe, no matter what consequences may be in store, and no matter who they face... Avenge the fallen."
+	},
+	{
+		href: '#',
+		image: '/movies-and-shows/hero/got.webp',
+		title: 'Game of Thrones',
+		description:
+			'Nine noble families wage war against each other in order to gain control over the mythical land of Westeros. Meanwhile, a forgotten force is rising after millennia, threatening the existence of the realms of men. In the game of thrones, you win or you die.'
+	},
+	{
+		href: '#',
+		image: '/movies-and-shows/hero/the-gray-man.jpg',
+		title: 'The Gray Man',
+		description:
+			"When the CIA's top asset — his identity known to no one — uncovers deadly agency secrets, he triggers a global manhunt. Hunted across the world by a psychopathic rogue operative, he must stay one step ahead to survive."
+	},
+	{
+		href: '#',
+		image: '/movies-and-shows/hero/squid-game.jpg',
+		title: 'Squid Game',
+		description:
+			"Hundreds of cash-strapped players accept a strange invitation to compete in traditional children's games. Inside a secret facility, a massive cash prize awaits — but the stakes are deadly. Survive the game, or pay the ultimate price."
+	}
+]
 
 // ----------------- Movies -----------------
 

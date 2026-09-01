@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils/cn'
 export interface ButtonProps {
 	children: ReactNode
 	type?: 'button' | 'submit' | 'reset'
-	size?: 'default' | 'primary' | 'secondary' | 'square' | 'none'
-	variant?: 'default' | 'primary' | 'secondary' | 'ghost' | 'none'
+	size?: 'default' | 'primary' | 'secondary' | 'icon' | 'square' | 'none'
+	variant?: 'default' | 'primary' | 'secondary' | 'icon' | 'ghost' | 'none'
 	startIcon?: ReactNode
 	endIcon?: ReactNode
 	onClick?: (e?: React.MouseEvent) => void
@@ -21,6 +21,7 @@ const sizeClasses = {
 	default: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
 	primary: 'px-6 py-3.5 gap-1 text-sm 2xl:text-lg',
 	secondary: 'px-5 py-3 2xl:px-6 2xl:py-3.5 text-sm 2xl:text-lg',
+	icon: 'p-3 2xl:p-3.5',
 	square: 'p-2.5 2xl:p-3.5',
 	none: ''
 }
@@ -32,6 +33,7 @@ const variantClasses = {
 	primary:
 		'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
 	secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',
+	icon: 'bg-black-06 hover:bg-black-08 text-white ring ring-black-15',
 	ghost: 'bg-transparent text-white hover:text-red-45',
 	none: ''
 }

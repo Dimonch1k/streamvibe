@@ -20,7 +20,7 @@ export function HeroSection() {
 			<Image
 				unoptimized
 				priority
-				src={`${process.env.NEXT_PUBLIC_SUPABASE_STORAGE_IMAGES_URL}/hero.png`}
+				src={`${process.env.NEXT_PUBLIC_SUPABASE_STORAGE_IMAGES_URL}/heros/home.png`}
 				alt='Hero'
 				className='flex-1 w-full h-auto object-contain'
 				width={1920}

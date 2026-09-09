@@ -2,21 +2,37 @@ import { MoviesSection } from '@/components/sections/movies-and-shows/movies-sec
 import { ShowsSection } from '@/components/sections/movies-and-shows/shows-section'
 import { HeroGallery } from '@/components/ui/hero-gallery'
 
-import { heroGalleryListData } from '@/data/movies-and-shows.data'
+import type { ICategoryItem } from '@/types/sections/category.interface'
+import type { IHeroGalleryItem } from '@/types/sections/hero.interface'
 
-import { getGenres } from '@/lib/genres/actions'
-import { toGenreCategoryItems } from '@/lib/genres/utils'
+import type { MediaCollectionGallery } from '@/lib/media-collections/types'
 
-export async function MoviesAndShows() {
-	const genres = await getGenres()
-	const movieGenreItems = toGenreCategoryItems(genres, 'movie')
-	const showGenreItems = toGenreCategoryItems(genres, 'show')
+export interface MoviesAndShowsProps {
+	heroItems: IHeroGalleryItem[]
+	movieGenres: ICategoryItem[]
+	showGenres: ICategoryItem[]
+	movieGalleries: MediaCollectionGallery[]
+	showGalleries: MediaCollectionGallery[]
+}
 
+export function MoviesAndShows({
+	heroItems,
+	movieGenres,
+	showGenres,
+	movieGalleries,
+	showGalleries
+}: MoviesAndShowsProps) {
 	return (
 		<>
-			<HeroGallery listData={heroGalleryListData} />
-			<MoviesSection genres={movieGenreItems} />
-			<ShowsSection genres={showGenreItems} />
+			{heroItems.length > 0 && <HeroGallery listData={heroItems} />}
+			<MoviesSection
+				genres={movieGenres}
+				galleries={movieGalleries}
+			/>
+			<ShowsSection
+				genres={showGenres}
+				galleries={showGalleries}
+			/>
 		</>
 	)
 }

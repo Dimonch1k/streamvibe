@@ -24,7 +24,7 @@ export function SendMessageSection() {
 				{/* Image */}
 				<div className='bg-black-08 border-6 border-black-15 rounded-md'>
 					<Image
-						src='/support/support.png'
+						src='/support.png'
 						alt='Support'
 						width={235}
 						height={252}

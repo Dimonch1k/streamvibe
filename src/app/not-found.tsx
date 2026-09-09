@@ -3,9 +3,9 @@
 import { Home } from 'lucide-react'
 import Link from 'next/link'
 
-import { ROUTES } from '@/constants/routes.constants'
+import { Button } from '@/components/ui/button'
 
-import { cn } from '@/lib/utils/cn'
+import { ROUTES } from '@/constants/routes.constants'
 
 export default function NotFound() {
 	return (
@@ -23,16 +23,12 @@ export default function NotFound() {
 
 			<Link
 				href={ROUTES.HOME}
-				className={cn(
-					'text-sm lg:text-lg leading-[150%] font-medium',
-					'mt-8 px-6 py-3',
-					'text-orange-50 hover:text-white bg-transparent hover:bg-orange-50 border-2 border-orange-50',
-					'rounded-xl shadow-lg inline-flex items-center justify-center gap-2',
-					'transition-colors duration-300 ease-linear'
-				)}
+				className='mt-8'
 			>
-				<Home size={18} />
-				Go Home
+				<Button variant='secondary'>
+					<Home size={18} />
+					Go Home
+				</Button>
 			</Link>
 		</div>
 	)

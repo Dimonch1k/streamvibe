@@ -7,16 +7,16 @@ import { Legend } from '@/components/ui/legend'
 
 import { ROUTES } from '@/constants/routes.constants'
 
-import {
-	moviesMustWatchListData,
-	moviesPopularTopListData,
-	moviesReleasesListData,
-	moviesTrendingListData
-} from '@/data/movies-and-shows.data'
-
 import type { ICategoryItem } from '@/types/sections/category.interface'
 
-export function MoviesSection({ genres }: { genres: ICategoryItem[] }) {
+import type { MediaCollectionGallery } from '@/lib/media-collections/types'
+
+export interface MoviesSectionProps {
+	genres: ICategoryItem[]
+	galleries: MediaCollectionGallery[]
+}
+
+export function MoviesSection({ genres, galleries }: MoviesSectionProps) {
 	const router = useRouter()
 
 	return (
@@ -29,25 +29,14 @@ export function MoviesSection({ genres }: { genres: ICategoryItem[] }) {
 					title='Our Genres'
 					listData={genres}
 				/>
-				<Gallery
-					title='Popular Top 10 In Genres'
-					listData={moviesPopularTopListData}
-				/>
-				<Gallery
-					title='Trending Now'
-					listData={moviesTrendingListData}
-					itemType='compact'
-				/>
-				<Gallery
-					title='New Releases'
-					listData={moviesReleasesListData}
-					itemType='compact'
-				/>
-				<Gallery
-					title='Must - Watch Movies'
-					listData={moviesMustWatchListData}
-					itemType='compact'
-				/>
+				{galleries.map(gallery => (
+					<Gallery
+						key={gallery.id}
+						title={gallery.title}
+						listData={gallery.items}
+						itemType={gallery.itemType}
+					/>
+				))}
 			</Legend>
 		</>
 	)

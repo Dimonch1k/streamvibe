@@ -104,7 +104,7 @@ export function CategoryListItem({
 					)}
 
 					{item.rating_number && (
-						<Badge className='gap-1 px-2! lg:px-2.5! py-1.25!'>
+						<Badge className='gap-1 pl-2 lg:pl-2.5 2xl:pl-2.5 pr-2 lg:pr-2.5 2xl:pr-2.5 py-1.25'>
 							<ul className='flex items-center gap-px leading-[150%]'>
 								{[...Array(5)].map((_, index) => (
 									<StarIcon
@@ -119,7 +119,7 @@ export function CategoryListItem({
 					)}
 
 					{item.released_at && (
-						<Badge className='gap-1 px-3.5! 2xl:px-2.5! py-1.5!'>
+						<Badge className='w-full justify-center gap-1 px-3.5 2xl:px-2.5 py-1.5'>
 							Released at
 							<span className='text-[#BFBFBF]'>{item.released_at}</span>
 						</Badge>

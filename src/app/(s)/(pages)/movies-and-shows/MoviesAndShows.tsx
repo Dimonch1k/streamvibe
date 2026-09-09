@@ -4,12 +4,19 @@ import { HeroGallery } from '@/components/ui/hero-gallery'
 
 import { heroGalleryListData } from '@/data/movies-and-shows.data'
 
-export function MoviesAndShows() {
+import { getGenres } from '@/lib/genres/actions'
+import { toGenreCategoryItems } from '@/lib/genres/utils'
+
+export async function MoviesAndShows() {
+	const genres = await getGenres()
+	const movieGenreItems = toGenreCategoryItems(genres, 'movie')
+	const showGenreItems = toGenreCategoryItems(genres, 'show')
+
 	return (
 		<>
 			<HeroGallery listData={heroGalleryListData} />
-			<MoviesSection />
-			<ShowsSection />
+			<MoviesSection genres={movieGenreItems} />
+			<ShowsSection genres={showGenreItems} />
 		</>
 	)
 }

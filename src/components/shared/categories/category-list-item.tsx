@@ -43,7 +43,7 @@ export function CategoryListItem({
 					alt={item.title || item.image}
 					width={235}
 					height={252}
-					className='w-full h-full'
+					className='w-full h-full object-cover'
 					draggable={false}
 				/>
 

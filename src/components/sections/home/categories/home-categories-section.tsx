@@ -6,21 +6,17 @@ import { CategoryList } from '@/components/shared/categories/category-list'
 import { Section } from '@/components/ui/section'
 import { Switcher } from '@/components/ui/switcher'
 
-import { categoriesListData } from '@/data/home.data'
+import type { ICategoryItem } from '@/types/sections/category.interface'
 
-export function HomeCategoriesSection() {
+export function HomeCategoriesSection({ genres }: { genres: ICategoryItem[] }) {
 	const [activeIndex, setActiveIndex] = useState(0)
 
 	const handlePrev = () => {
-		setActiveIndex(prev =>
-			prev === 0 ? categoriesListData.length - 1 : prev - 1
-		)
+		setActiveIndex(prev => (prev === 0 ? genres.length - 1 : prev - 1))
 	}
 
 	const handleNext = () => {
-		setActiveIndex(prev =>
-			prev === categoriesListData.length - 1 ? 0 : prev + 1
-		)
+		setActiveIndex(prev => (prev === genres.length - 1 ? 0 : prev + 1))
 	}
 
 	const handleDotClick = (index: number) => {
@@ -36,7 +32,7 @@ export function HomeCategoriesSection() {
 				<Switcher
 					className='hidden lg:inline-flex'
 					activeIndex={activeIndex}
-					totalItems={categoriesListData.length}
+					totalItems={genres.length}
 					onPrev={handlePrev}
 					onNext={handleNext}
 					onDotClick={handleDotClick}
@@ -44,7 +40,7 @@ export function HomeCategoriesSection() {
 			}
 		>
 			<CategoryList
-				list={categoriesListData}
+				list={genres}
 				onPrev={handlePrev}
 				onNext={handleNext}
 			/>

@@ -7,40 +7,11 @@ import {
 	VrHeadsetsIcon
 } from '@/components/ui/icons/home'
 
-import type { ICategoryItem } from '@/types/sections/category.interface'
 import type { IDeviceItem } from '@/types/sections/device.interface'
 import type { IFaqItem } from '@/types/sections/faq.interface'
 
 const deviceColor = '#e50000'
 const deviceIconClassName = 'size-6 lg:size-7.5 2xl:size-10'
-
-export const categoriesListData: ICategoryItem[] = [
-	{
-		href: '#',
-		image: '/categories/category-action.png',
-		title: 'Action'
-	},
-	{
-		href: '#',
-		image: '/categories/category-adventure.png',
-		title: 'Adventure'
-	},
-	{
-		href: '#',
-		image: '/categories/category-comedy.png',
-		title: 'Comedy'
-	},
-	{
-		href: '#',
-		image: '/categories/category-drama.png',
-		title: 'Drama'
-	},
-	{
-		href: '#',
-		image: '/categories/category-horror.png',
-		title: 'Horror'
-	}
-]
 
 export const devicesListData: IDeviceItem[] = [
 	{

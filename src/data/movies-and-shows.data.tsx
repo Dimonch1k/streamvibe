@@ -35,39 +35,6 @@ export const heroGalleryListData: IHeroGalleryItem[] = [
 
 // ----------------- Movies -----------------
 
-export const moviesGenresListData: ICategoryItem[] = [
-	{
-		href: '#',
-		image: '/categories/category-action.png',
-		title: 'Action',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-adventure.png',
-		title: 'Adventure',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-comedy.png',
-		title: 'Comedy',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-drama.png',
-		title: 'Drama',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-horror.png',
-		title: 'Horror',
-		hasArrowIcon: true
-	}
-]
-
 export const moviesPopularTopListData: ICategoryItem[] = [
 	{
 		href: '#',
@@ -188,39 +155,6 @@ export const moviesMustWatchListData: ICategoryItem[] = [
 ]
 
 // ----------------- Shows -----------------
-
-export const showsGenresListData: ICategoryItem[] = [
-	{
-		href: '#',
-		image: '/categories/category-action.png',
-		title: 'Action',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-adventure.png',
-		title: 'Adventure',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-comedy.png',
-		title: 'Comedy',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-drama.png',
-		title: 'Drama',
-		hasArrowIcon: true
-	},
-	{
-		href: '#',
-		image: '/categories/category-horror.png',
-		title: 'Horror',
-		hasArrowIcon: true
-	}
-]
 
 export const showsPopularTopListData: ICategoryItem[] = [
 	{

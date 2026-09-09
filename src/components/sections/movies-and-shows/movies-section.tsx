@@ -1,21 +1,33 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 import { Gallery } from '@/components/ui/gallery'
 import { Legend } from '@/components/ui/legend'
 
+import { ROUTES } from '@/constants/routes.constants'
+
 import {
-	moviesGenresListData,
 	moviesMustWatchListData,
 	moviesPopularTopListData,
 	moviesReleasesListData,
 	moviesTrendingListData
 } from '@/data/movies-and-shows.data'
 
-export function MoviesSection() {
+import type { ICategoryItem } from '@/types/sections/category.interface'
+
+export function MoviesSection({ genres }: { genres: ICategoryItem[] }) {
+	const router = useRouter()
+
 	return (
 		<>
-			<Legend header='Movies'>
+			<Legend
+				header='Movies'
+				onClick={() => router.push(ROUTES.MOVIES)}
+			>
 				<Gallery
 					title='Our Genres'
-					listData={moviesGenresListData}
+					listData={genres}
 				/>
 				<Gallery
 					title='Popular Top 10 In Genres'

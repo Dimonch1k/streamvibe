@@ -1,21 +1,33 @@
+'use client'
+
+import { useRouter } from 'next/navigation'
+
 import { Gallery } from '@/components/ui/gallery'
 import { Legend } from '@/components/ui/legend'
 
+import { ROUTES } from '@/constants/routes.constants'
+
 import {
-	showsGenresListData,
 	showsMustWatchListData,
 	showsPopularTopListData,
 	showsReleasesListData,
 	showsTrendingListData
 } from '@/data/movies-and-shows.data'
 
-export function ShowsSection() {
+import type { ICategoryItem } from '@/types/sections/category.interface'
+
+export function ShowsSection({ genres }: { genres: ICategoryItem[] }) {
+	const router = useRouter()
+
 	return (
 		<>
-			<Legend header='Shows'>
+			<Legend
+				header='Shows'
+				onClick={() => router.push(ROUTES.SHOWS)}
+			>
 				<Gallery
 					title='Our Genres'
-					listData={showsGenresListData}
+					listData={genres}
 				/>
 				<Gallery
 					title='Popular Top 10 In Genres'

@@ -18,8 +18,9 @@ export function HeroSection() {
 			)}
 		>
 			<Image
+				unoptimized
 				priority
-				src='/hero.png'
+				src='https://lgozghbelutpceewvirl.supabase.co/storage/v1/object/public/images/hero.png'
 				alt='Hero'
 				className='flex-1 w-full h-auto object-contain'
 				width={1920}

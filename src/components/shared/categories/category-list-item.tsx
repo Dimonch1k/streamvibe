@@ -39,6 +39,7 @@ export function CategoryListItem({
 				)}
 			>
 				<Image
+					unoptimized
 					src={item.image}
 					alt={item.title || item.image}
 					width={235}

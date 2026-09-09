@@ -39,6 +39,7 @@ export function HeroGalleryListItem({
 			<div className='flex-1 w-full h-full z-10 overflow-hidden py-[1.25px] px-px'>
 				<div className='flex-1 h-full w-full relative bg-linear-to-t from-black-08 to-black-08/0'>
 					<Image
+						unoptimized
 						src={item.image}
 						alt={item.title}
 						width={1594}

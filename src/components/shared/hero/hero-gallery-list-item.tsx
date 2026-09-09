@@ -51,7 +51,6 @@ export function HeroGalleryListItem({
 						// href={item.href}
 						className={cn(
 							'h-full flex-1 flex flex-col justify-center text-center',
-							// '',
 							'p-6 pb-4 lg:p-10 lg:pb-4 2xl:p-12.5 2xl:pb-5',
 							className
 						)}
@@ -66,6 +65,7 @@ export function HeroGalleryListItem({
 								>
 									{item.title}
 								</h5>
+
 								<p
 									className={cn(
 										'hidden lg:block text-grey-60 font-medium leading-[150%]',
@@ -75,6 +75,7 @@ export function HeroGalleryListItem({
 									{item.description}
 								</p>
 							</div>
+
 							<div className='w-full flex flex-col justify-center lg:flex-row gap-5 items-center'>
 								<Button
 									variant='primary'
@@ -88,6 +89,7 @@ export function HeroGalleryListItem({
 								>
 									Play Now
 								</Button>
+
 								<div className='flex flex-row gap-2 2xl:gap-2.5'>
 									<Button
 										variant='icon'
@@ -98,6 +100,7 @@ export function HeroGalleryListItem({
 											className='size-6 2xl:size-7'
 										/>
 									</Button>
+
 									<Button
 										variant='icon'
 										size='icon'
@@ -107,6 +110,7 @@ export function HeroGalleryListItem({
 											className='size-6 2xl:size-7'
 										/>
 									</Button>
+
 									<Button
 										variant='icon'
 										size='icon'

@@ -75,7 +75,7 @@ export function CategoryListItem({
 						</h5>
 					) : null}
 
-					{item.hasArrowIcon && (
+					{item.has_arrow_icon && (
 						<ArrowRightIcon
 							color='white'
 							className='size-5 lg:size-6 2xl:size-7.5'
@@ -83,28 +83,28 @@ export function CategoryListItem({
 					)}
 
 					{item.time && (
-						<Badge>
+						<Badge className='gap-0.5'>
 							<ClockIcon color='#999' />
 							{item.time}
 						</Badge>
 					)}
 
 					{item.views && (
-						<Badge>
+						<Badge className='gap-1'>
 							<EyeIcon color='#999' />
 							{item.views}
 						</Badge>
 					)}
 
-					{item.seasonNumber && (
-						<Badge>
+					{item.season_number && (
+						<Badge className='gap-1'>
 							<StackIcon color='#999' />
-							{item.seasonNumber} Season
+							{item.season_number} Season
 						</Badge>
 					)}
 
-					{item.ratingNumber && (
-						<Badge>
+					{item.rating_number && (
+						<Badge className='gap-1 px-2! lg:px-2.5! py-1.25!'>
 							<ul className='flex items-center gap-px leading-[150%]'>
 								{[...Array(5)].map((_, index) => (
 									<StarIcon
@@ -114,14 +114,14 @@ export function CategoryListItem({
 									/>
 								))}
 							</ul>
-							{item.ratingNumber}K
+							{item.rating_number}K
 						</Badge>
 					)}
 
-					{item.releasedAt && (
-						<Badge className='gap-1'>
+					{item.released_at && (
+						<Badge className='gap-1 px-3.5! 2xl:px-2.5! py-1.5!'>
 							Released at
-							<span className='text-[#BFBFBF]'>{item.releasedAt}</span>
+							<span className='text-[#BFBFBF]'>{item.released_at}</span>
 						</Badge>
 					)}
 				</div>

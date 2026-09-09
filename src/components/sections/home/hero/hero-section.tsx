@@ -20,7 +20,7 @@ export function HeroSection() {
 			<Image
 				unoptimized
 				priority
-				src='https://lgozghbelutpceewvirl.supabase.co/storage/v1/object/public/images/hero.png'
+				src={`${process.env.NEXT_PUBLIC_SUPABASE_STORAGE_IMAGES_URL}/hero.png`}
 				alt='Hero'
 				className='flex-1 w-full h-auto object-contain'
 				width={1920}

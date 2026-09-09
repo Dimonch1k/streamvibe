@@ -17,7 +17,7 @@ export function ArrowLeftIcon({ color, className }: ArrowLeftIconProps) {
 		>
 			<path
 				d='M19.5 12L4.5 12M11.25 5.25L4.5 12L11.25 18.75'
-				stroke='white'
+				stroke={color}
 				strokeWidth='1.5'
 				strokeLinecap='round'
 				strokeLinejoin='round'

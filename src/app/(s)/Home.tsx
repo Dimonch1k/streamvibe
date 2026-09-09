@@ -8,26 +8,18 @@ import { FaqSection, PricingSection } from '@/components/shared'
 
 import { ICategoryItem } from '@/types/sections/category.interface'
 
-import { getGenres } from '@/lib/genres/actions'
-import { toGenreCategoryItems } from '@/lib/genres/utils'
-
 export interface HomeProps {
 	genres: ICategoryItem[]
 }
 
-export async function Home({}: HomeProps) {
-	const genres = await getGenres()
-	const genreItems = toGenreCategoryItems(genres, 'movie')
-
-	console.log(genreItems)
-
+export async function Home({ genres }: HomeProps) {
 	return (
 		<>
 			<HeroSection />
 
 			<main className='flex-1 px-6 py-25 lg:px-20 lg:py-37.5 2xl:px-40.5 2xl:py-50'>
 				<div className='w-full max-w-400 mx-auto flex flex-col gap-20 lg:gap-30 2xl:gap-37.5'>
-					<HomeCategoriesSection genres={genreItems} />
+					<HomeCategoriesSection genres={genres} />
 					<DevicesSection />
 					<FaqSection />
 					<PricingSection hasTable={false} />

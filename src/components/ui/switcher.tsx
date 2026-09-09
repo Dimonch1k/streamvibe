@@ -35,7 +35,10 @@ export function Switcher({
 				size='square'
 				onClick={onPrev}
 			>
-				<ArrowLeftIcon color='#fff' />
+				<ArrowLeftIcon
+					color='#fff'
+					className='size-6 2xl:size-7'
+				/>
 			</Button>
 
 			<ul className='flex gap-0.75'>
@@ -57,7 +60,10 @@ export function Switcher({
 				size={type === 'icon' ? 'icon' : 'square'}
 				onClick={onNext}
 			>
-				<ArrowRightIcon color='#fff' />
+				<ArrowRightIcon
+					color='#fff'
+					className='size-6 2xl:size-7'
+				/>
 			</Button>
 		</SelectorContainer>
 	)

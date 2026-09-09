@@ -16,7 +16,8 @@ export const MobileMenuButton = forwardRef<
 		<Button
 			ref={ref}
 			onClick={toggleMenu}
-			className='md:hidden bg-black-10 p-3 ring-3 ring-black-15 rounded-md'
+			size='icon'
+			className='md:hidden ring-3'
 		>
 			{isMenuOpen ? <X size={24} /> : <AlignRight size={24} />}
 		</Button>

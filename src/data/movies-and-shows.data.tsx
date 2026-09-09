@@ -41,28 +41,28 @@ export const moviesPopularTopListData: ICategoryItem[] = [
 		image: '/movies-and-shows/movies/popular-action.png',
 		title: 'Action',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/popular-adventure.png',
 		title: 'Adventure',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/popular-comedy.png',
 		title: 'Comedy',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/popular-drama.png',
 		title: 'Drama',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	}
 ]
 
@@ -103,27 +103,27 @@ export const moviesReleasesListData: ICategoryItem[] = [
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/new-releases-1.png',
-		releasedAt: '14 April 2023'
+		released_at: '14 April 2023'
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/new-releases-2.png',
-		releasedAt: '22 April 2023'
+		released_at: '22 April 2023'
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/new-releases-3.png',
-		releasedAt: '13 April 2023'
+		released_at: '13 April 2023'
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/new-releases-4.png',
-		releasedAt: '19 April 2023'
+		released_at: '19 April 2023'
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/new-releases-5.png',
-		releasedAt: '11 April 2023'
+		released_at: '11 April 2023'
 	}
 ]
 
@@ -132,25 +132,25 @@ export const moviesMustWatchListData: ICategoryItem[] = [
 		href: '#',
 		image: '/movies-and-shows/movies/must-watch-1.png',
 		time: '1h 57min',
-		ratingNumber: 20
+		rating_number: 20
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/must-watch-2.png',
 		time: '1h 30min',
-		ratingNumber: 20
+		rating_number: 20
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/must-watch-3.png',
 		time: '1h 42min',
-		ratingNumber: 20
+		rating_number: 20
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/movies/must-watch-4.png',
 		time: '2h 10min',
-		ratingNumber: 20
+		rating_number: 20
 	}
 ]
 
@@ -162,28 +162,28 @@ export const showsPopularTopListData: ICategoryItem[] = [
 		image: '/movies-and-shows/shows/popular-action.png',
 		title: 'Action',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/popular-adventure.png',
 		title: 'Adventure',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/popular-comedy.png',
 		title: 'Comedy',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/popular-drama.png',
 		title: 'Drama',
 		badge: 'Top 10 In',
-		hasArrowIcon: true
+		has_arrow_icon: true
 	}
 ]
 
@@ -192,25 +192,25 @@ export const showsTrendingListData: ICategoryItem[] = [
 		href: '#',
 		image: '/movies-and-shows/shows/trending-1.png',
 		time: '8h 20min',
-		seasonNumber: 4
+		season_number: 4
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/trending-2.png',
 		time: '12h 23min',
-		seasonNumber: 5
+		season_number: 5
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/trending-3.png',
 		time: '14h 30min',
-		seasonNumber: 3
+		season_number: 3
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/trending-4.png',
 		time: '7h 40min',
-		seasonNumber: 2
+		season_number: 2
 	}
 ]
 
@@ -219,51 +219,51 @@ export const showsReleasesListData: ICategoryItem[] = [
 		href: '#',
 		image: '/movies-and-shows/shows/new-releases-1.png',
 		time: '12h 23min',
-		seasonNumber: 5
+		season_number: 5
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/new-releases-2.png',
 		time: '7h 40min',
-		seasonNumber: 2
+		season_number: 2
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/new-releases-3.png',
 		time: '8h 20min',
-		seasonNumber: 4
+		season_number: 4
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/new-releases-4.png',
 		time: '10h 30min',
-		seasonNumber: 3
+		season_number: 3
 	}
 ]
 
 export const showsMustWatchListData: ICategoryItem[] = [
 	{
 		href: '#',
-		image: '/movies-and-shows/shows/duranga.png',
+		image: '/movies-and-shows/shows/must-watch-1.png',
 		time: '7h 40min',
-		ratingNumber: 12
+		rating_number: 12
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/must-watch-2.png',
 		time: '12h 23min',
-		ratingNumber: 28
+		rating_number: 28
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/must-watch-3.png',
 		time: '10h 30min',
-		ratingNumber: 2
+		rating_number: 2
 	},
 	{
 		href: '#',
 		image: '/movies-and-shows/shows/must-watch-4.png',
 		time: '8h 20min',
-		ratingNumber: 32
+		rating_number: 32
 	}
 ]

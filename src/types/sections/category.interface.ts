@@ -4,9 +4,9 @@ export interface ICategoryItem {
 	title?: string
 	time?: string
 	views?: string
-	releasedAt?: string
-	ratingNumber?: number
+	released_at?: string
+	rating_number?: number
 	badge?: string
-	seasonNumber?: number
-	hasArrowIcon?: boolean
+	season_number?: number
+	has_arrow_icon?: boolean
 }

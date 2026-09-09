@@ -29,7 +29,7 @@ const sizeClasses = {
 // Variant Classes
 const variantClasses = {
 	default:
-		'bg-black-10 hover:bg-black-15 text-white ring ring-black-10 hover:ring-black-15',
+		'bg-black-10 hover:bg-black-15 text-white ring ring-black-15 hover:ring-black-15',
 	primary:
 		'bg-red-45 hover:bg-red-30 text-white ring ring-red-45 hover:ring-red-30',
 	secondary: 'bg-black-08 hover:bg-black-15 text-white ring ring-black-15',

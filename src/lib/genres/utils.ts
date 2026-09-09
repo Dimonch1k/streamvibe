@@ -4,12 +4,13 @@ import type { ICategoryItem } from '@/types/sections/category.interface'
 
 import type { GenreItem, GenreMediaType } from './types'
 
-const fallbackImagePath = (slug: string) => `/categories/category-${slug}.png`
+const fallbackImagePath = (slug: string) => `/categories/${slug}.png`
 
 function getImageUrl(imagePath: string | null, slug: string) {
 	if (!imagePath) return fallbackImagePath(slug)
 
-	const supabaseStorageImagesUrl = process.env.SUPABASE_STORAGE_IMAGES_URL
+	const supabaseStorageImagesUrl =
+		process.env.NEXT_PUBLIC_SUPABASE_STORAGE_IMAGES_URL
 
 	if (!supabaseStorageImagesUrl) return fallbackImagePath(slug)
 
@@ -32,6 +33,6 @@ export function toGenreCategoryItems(
 				: ROUTES.SHOWS_FILTER(genre.slug),
 		image: getImageUrl(genre.imagePath, genre.slug),
 		title: genre.name,
-		hasArrowIcon: true
+		has_arrow_icon: true
 	}))
 }

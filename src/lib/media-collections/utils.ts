@@ -1,3 +1,4 @@
+import { ICategoryItem } from '@/types/sections/category.interface'
 import type { IHeroGalleryItem } from '@/types/sections/hero.interface'
 
 import type {
@@ -53,12 +54,6 @@ function formatCount(value: number | null) {
 	return `${formattedValue}K`
 }
 
-function toThousands(value: number | null) {
-	if (!value) return undefined
-
-	return value / 1_000
-}
-
 function formatReleasedAt(value: string | null) {
 	if (!value) return undefined
 
@@ -73,7 +68,7 @@ function formatReleasedAt(value: string | null) {
 function toGalleryItem(
 	collection: MediaCollectionItem,
 	item: MediaCollectionMediaItem
-) {
+): ICategoryItem {
 	const baseItem = {
 		href: getMediaHref(item),
 		image: getImageUrl(item.posterPath, item.title)
@@ -91,21 +86,29 @@ function toGalleryItem(
 			return {
 				...baseItem,
 				time: formatDuration(item.durationMinutes),
-				views: formatCount(item.viewsCount),
+				views:
+					item.mediaType !== 'show' ? formatCount(item.viewsCount) : undefined,
 				season_number: item.mediaType === 'show' ? item.seasonCount : undefined
 			}
 		case 'new_releases':
 			return {
 				...baseItem,
-				time: formatDuration(item.durationMinutes),
+				time:
+					item.mediaType === 'show'
+						? formatDuration(item.durationMinutes)
+						: undefined,
 				season_number: item.mediaType === 'show' ? item.seasonCount : undefined,
-				released_at: formatReleasedAt(item.releasedAt)
+				released_at:
+					item.mediaType !== 'show'
+						? formatReleasedAt(item.releasedAt)
+						: undefined
 			}
 		case 'must_watch':
 			return {
 				...baseItem,
 				time: formatDuration(item.durationMinutes),
-				rating_number: toThousands(item.votesCount)
+				rating_number: item.rating ?? undefined,
+				votes_count: item.votesCount ?? undefined
 			}
 		default:
 			return baseItem

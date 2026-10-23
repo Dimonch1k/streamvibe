@@ -18,6 +18,7 @@ export interface MediaCollectionMediaItem {
 	releasedAt: string | null
 	mediaType: MediaType
 	badge: string | null
+	rating: number | null
 	votesCount: number | null
 	seasonCount: number
 }

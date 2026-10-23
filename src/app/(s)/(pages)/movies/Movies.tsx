@@ -7,11 +7,11 @@
 // import { MoviesHeader } from '@/components/pages/movies/MoviesHeader'
 // import { MoviesSearch } from '@/components/pages/movies/MoviesSearch'
 // import { MoviesStats } from '@/components/pages/movies/MoviesStats'
-import type { MovieItem } from '@/lib/movies/types'
+import type { MediaItem } from '@/lib/media/types'
 
 // import { getMoviesStats } from '@/lib/movies/utils'
 
-export function Movies({ movies }: { movies: MovieItem[] }) {
+export function Movies({ movies }: { movies: MediaItem[] }) {
 	// const [search, setSearch] = useState('')
 	// const [selectedMovieId, setSelectedMovieId] = useState<string | null>(
 	// 	movies[0]?.id || null

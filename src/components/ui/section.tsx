@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 export interface SectionProps {
 	id: string

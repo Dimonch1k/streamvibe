@@ -2,7 +2,7 @@
 
 import { Loader as LoaderIcon } from 'lucide-react'
 
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 export interface LoaderProps {
 	className?: string

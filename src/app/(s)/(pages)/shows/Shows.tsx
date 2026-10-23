@@ -7,11 +7,11 @@
 // import { ShowsHeader } from '@/components/pages/shows/ShowsHeader'
 // import { ShowsSearch } from '@/components/pages/shows/ShowsSearch'
 // import { ShowsStats } from '@/components/pages/shows/ShowsStats'
-import type { ShowItem } from '@/lib/shows/types'
+import type { MediaItem } from '@/lib/media/types'
 
 // import { getShowsStats } from '@/lib/shows/utils'
 
-export function Shows({ shows }: { shows: ShowItem[] }) {
+export function Shows({ shows }: { shows: MediaItem[] }) {
 	// const [search, setSearch] = useState('')
 	// const [selectedShowId, setSelectedShowId] = useState<string | null>(
 	// 	shows[0]?.id || null

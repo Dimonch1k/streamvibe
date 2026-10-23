@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 import { FooterBottom } from './footer-bottom'
 import { FooterLinks } from './footer-links'

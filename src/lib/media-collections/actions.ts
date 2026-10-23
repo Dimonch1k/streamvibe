@@ -72,7 +72,7 @@ export async function getMediaCollections(): Promise<MediaCollectionItem[]> {
 			.eq('is_published', true),
 		supabase
 			.from('media_ratings')
-			.select('media_id,votes_count')
+			.select('media_id,rating,votes_count')
 			.in('media_id', mediaIds)
 			.eq('source', 'streamvibe'),
 		supabase.from('seasons').select('show_id').in('show_id', mediaIds)
@@ -95,6 +95,9 @@ export async function getMediaCollections(): Promise<MediaCollectionItem[]> {
 	const mediaById = new Map(mediaResult.data.map(media => [media.id, media]))
 	const votesByMediaId = new Map(
 		ratingsResult.data.map(rating => [rating.media_id, rating.votes_count])
+	)
+	const ratingsByMediaId = new Map(
+		ratingsResult.data.map(rating => [rating.media_id, rating.rating])
 	)
 	const seasonCountByShowId = new Map<string, number>()
 
@@ -124,7 +127,8 @@ export async function getMediaCollections(): Promise<MediaCollectionItem[]> {
 			releasedAt: media.released_at,
 			mediaType: media.type,
 			badge: collectionItem.badge,
-			votesCount: votesByMediaId.get(media.id) || null,
+			rating: ratingsByMediaId.get(media.id) ?? null,
+			votesCount: votesByMediaId.get(media.id) ?? null,
 			seasonCount: seasonCountByShowId.get(media.id) || 0
 		})
 		itemsByCollectionId.set(collectionItem.collection_id, items)

@@ -6,6 +6,7 @@ export interface ICategoryItem {
 	views?: string
 	released_at?: string
 	rating_number?: number
+	votes_count?: number
 	badge?: string
 	season_number?: number
 	has_arrow_icon?: boolean

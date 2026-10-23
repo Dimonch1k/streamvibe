@@ -17,8 +17,7 @@ import {
 	SupportMessageFormValues
 } from '@/types/sections/support.interface'
 
-import { getFirstRHFErrorMessage } from '@/lib/utils/errors'
-import { supportMessageSchema } from '@/lib/utils/support-validation'
+import { getFirstRHFErrorMessage, supportMessageSchema } from '@/lib/utils'
 
 export function SendMessageForm() {
 	const {

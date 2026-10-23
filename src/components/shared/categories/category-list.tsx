@@ -25,22 +25,6 @@ export function CategoryList({
 }: CategoryListProps) {
 	const scrollRef = useRef<HTMLUListElement>(null)
 
-	const scrollAmount = 300
-
-	const handlePrev = () => {
-		if (scrollRef.current) {
-			scrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' })
-		}
-		onPrev?.()
-	}
-
-	const handleNext = () => {
-		if (scrollRef.current) {
-			scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' })
-		}
-		onNext?.()
-	}
-
 	return (
 		<ul
 			ref={scrollRef}

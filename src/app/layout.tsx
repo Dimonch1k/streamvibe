@@ -7,7 +7,7 @@ import { Toaster } from '@/components/ui/sonner'
 
 import { SEO_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants'
 
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 const inter = Inter({
 	variable: '--font-inter',

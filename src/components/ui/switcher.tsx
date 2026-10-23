@@ -26,6 +26,8 @@ export function Switcher({
 	onNext,
 	onDotClick
 }: SwitcherProps) {
+	if (totalItems <= 1) return
+
 	return (
 		<SelectorContainer
 			className={cn('items-center gap-3 2xl:gap-4', className)}

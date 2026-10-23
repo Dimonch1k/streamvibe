@@ -5,7 +5,7 @@ import { match } from 'path-to-regexp'
 
 import type { INavItem } from '@/types/nav.interface'
 
-import { cn } from '@/lib/utils/cn'
+import { cn } from '@/lib/utils'
 
 import { NavListItem } from './nav-list-item'
 

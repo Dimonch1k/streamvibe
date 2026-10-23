@@ -8,11 +8,12 @@ import { ArrowRightIcon } from '@/components/ui/icons'
 import { ClockIcon } from '@/components/ui/icons/clock-icon'
 import { EyeIcon } from '@/components/ui/icons/eye-icon'
 import { StackIcon } from '@/components/ui/icons/stack-icon'
-import { StarIcon } from '@/components/ui/icons/star-icon'
 
 import type { ICategoryItem } from '@/types/sections/category.interface'
 
 import { cn } from '@/lib/utils'
+
+import { CategoryListItemRating } from './category-list-item-rating'
 
 export interface CategoryListItemProps {
 	item: ICategoryItem
@@ -103,19 +104,11 @@ export function CategoryListItem({
 						</Badge>
 					)}
 
-					{item.rating_number && (
-						<Badge className='gap-1 pl-2 lg:pl-2.5 2xl:pl-2.5 pr-2 lg:pr-2.5 2xl:pr-2.5 py-1.25'>
-							<ul className='flex items-center gap-px leading-[150%]'>
-								{[...Array(5)].map((_, index) => (
-									<StarIcon
-										key={index}
-										color='#E50000'
-										className='size-3.5 2xl:size-4.5'
-									/>
-								))}
-							</ul>
-							{item.rating_number}K
-						</Badge>
+					{item.rating_number && item.votes_count && (
+						<CategoryListItemRating
+							rating={item.rating_number}
+							votesCount={item.votes_count}
+						/>
 					)}
 
 					{item.released_at && (

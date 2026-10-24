@@ -91,9 +91,14 @@ export async function getMedium(slug: string): Promise<MediaDetailItem> {
 		}
 	}
 
-	const languageIds = languageLinks.data.map(row => row.language_id)
-	const genreIds = genreLinks.data.map(row => row.genre_id)
-	const personIds = [...new Set(credits.data.map(row => row.person_id))]
+	const languageLinkRows = languageLinks.data ?? []
+	const genreLinkRows = genreLinks.data ?? []
+	const creditRows = credits.data ?? []
+	const ratingRows = ratings.data ?? []
+	const reviewRows = reviews.data ?? []
+	const languageIds = languageLinkRows.map(row => row.language_id)
+	const genreIds = genreLinkRows.map(row => row.genre_id)
+	const personIds = [...new Set(creditRows.map(row => row.person_id))]
 	const [languages, genres, people] = await Promise.all([
 		languageIds.length
 			? supabase.from('languages').select('id,name').in('id', languageIds)
@@ -115,18 +120,21 @@ export async function getMedium(slug: string): Promise<MediaDetailItem> {
 		}
 	}
 
-	const peopleById = new Map(people.data.map(person => [person.id, person]))
+	const languageRows = languages.data ?? []
+	const genreRows = genres.data ?? []
+	const personRows = people.data ?? []
+	const peopleById = new Map(personRows.map(person => [person.id, person]))
 
 	return {
 		...data,
-		languages: languages.data.map(language => language.name),
-		genres: genres.data.map(genre => genre.name),
-		ratings: ratings.data.map(rating => ({
+		languages: languageRows.map(language => language.name),
+		genres: genreRows.map(genre => genre.name),
+		ratings: ratingRows.map(rating => ({
 			source: rating.source,
 			rating: rating.rating,
 			votesCount: rating.votes_count
 		})),
-		people: credits.data.flatMap(credit => {
+		people: creditRows.flatMap(credit => {
 			const person = peopleById.get(credit.person_id)
 			return person
 				? [
@@ -140,7 +148,7 @@ export async function getMedium(slug: string): Promise<MediaDetailItem> {
 					]
 				: []
 		}),
-		reviews: reviews.data.map(review => ({
+		reviews: reviewRows.map(review => ({
 			id: review.id,
 			name: `${review.first_name} ${review.last_name}`,
 			location: review.location,

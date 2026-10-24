@@ -20,7 +20,7 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: `${movie.title} | Movie`,
+		title: movie.title || 'Movie',
 		description:
 			movie.description || `Watch ${movie.title || 'movie'} online now.`
 	}

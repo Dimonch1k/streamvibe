@@ -1,9 +1,7 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { LikeIcon } from '@/components/ui/icons/like-icon'
-import { PlusIcon } from '@/components/ui/icons/plus-icon'
-import { VolumeIcon } from '@/components/ui/icons/volume-icon'
+import { Button } from '@/components/ui'
+import { LikeIcon, PlusIcon, VolumeIcon } from '@/components/ui/icons'
 
 import { cn } from '@/lib/utils'
 

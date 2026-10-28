@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 
-import { Section } from '@/components/ui/section'
+import { Section } from '@/components/ui'
 
 import { pricingListData } from '@/data/pricing.data'
 

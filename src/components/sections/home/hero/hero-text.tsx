@@ -1,5 +1,5 @@
-import { Button } from '@/components/ui/button'
-import { PlayIcon } from '@/components/ui/icons/play-icon'
+import { Button } from '@/components/ui'
+import { PlayIcon } from '@/components/ui/icons'
 
 export function HeroText() {
 	return (

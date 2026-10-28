@@ -1,9 +1,7 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { ArrowRightIcon } from '@/components/ui/icons'
-import { ArrowLeftIcon } from '@/components/ui/icons/arrow-left-icon'
-import { SelectorContainer } from '@/components/ui/selector-container'
+import { Button, SelectorContainer } from '@/components/ui'
+import { ArrowLeftIcon, ArrowRightIcon } from '@/components/ui/icons'
 
 import { cn } from '@/lib/utils'
 

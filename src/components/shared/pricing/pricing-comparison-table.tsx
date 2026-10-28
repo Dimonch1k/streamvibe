@@ -1,5 +1,4 @@
-import { Section } from '@/components/ui/section'
-import { Table } from '@/components/ui/table'
+import { Section, Table } from '@/components/ui'
 
 import {
 	pricingMonthlyComparisonTableData,

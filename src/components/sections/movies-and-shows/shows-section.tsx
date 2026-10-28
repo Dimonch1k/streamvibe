@@ -2,8 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 
-import { Gallery } from '@/components/ui/gallery'
-import { Legend } from '@/components/ui/legend'
+import { Gallery, Legend } from '@/components/ui'
 
 import { ROUTES } from '@/constants/routes.constants'
 

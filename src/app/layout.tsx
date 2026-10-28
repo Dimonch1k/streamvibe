@@ -3,7 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter, Manrope } from 'next/font/google'
 
-import { Toaster } from '@/components/ui/sonner'
+import { Toaster } from '@/components/ui'
 
 import { SEO_DESCRIPTION, SITE_NAME } from '@/constants/seo.constants'
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { Section } from '@/components/ui/section'
+import { Section } from '@/components/ui'
 
 import { devicesListData } from '@/data/home.data'
 

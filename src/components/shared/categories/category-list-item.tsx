@@ -3,11 +3,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Badge } from '@/components/ui/badge'
-import { ArrowRightIcon } from '@/components/ui/icons'
-import { ClockIcon } from '@/components/ui/icons/clock-icon'
-import { EyeIcon } from '@/components/ui/icons/eye-icon'
-import { StackIcon } from '@/components/ui/icons/stack-icon'
+import { Badge } from '@/components/ui'
+import {
+	ArrowRightIcon,
+	ClockIcon,
+	EyeIcon,
+	StackIcon
+} from '@/components/ui/icons'
 
 import type { ICategoryItem } from '@/types/sections/category.interface'
 

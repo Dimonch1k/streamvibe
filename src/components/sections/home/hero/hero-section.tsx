@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 
-import { Section } from '@/components/ui/section'
+import { Section } from '@/components/ui'
 
 import { cn } from '@/lib/utils'
 

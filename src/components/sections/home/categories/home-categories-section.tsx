@@ -3,8 +3,7 @@
 import { useState } from 'react'
 
 import { CategoryList } from '@/components/shared/categories/category-list'
-import { Section } from '@/components/ui/section'
-import { Switcher } from '@/components/ui/switcher'
+import { Section, Switcher } from '@/components/ui'
 
 import type { ICategoryItem } from '@/types/sections/category.interface'
 

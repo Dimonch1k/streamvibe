@@ -3,8 +3,7 @@
 import { useRef, type ReactNode } from 'react'
 import { Calendar, Languages, LayoutGrid, Plus, Star } from 'lucide-react'
 
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { Badge, Button } from '@/components/ui'
 import {
 	Card,
 	CardAction,
@@ -13,9 +12,7 @@ import {
 	CardHeader,
 	CardTitle
 } from '@/components/ui/card'
-import { ArrowLeftIcon } from '@/components/ui/icons/arrow-left-icon'
-import { ArrowRightIcon } from '@/components/ui/icons/arrow-right-icon'
-import { StarIcon } from '@/components/ui/icons/star-icon'
+import { ArrowLeftIcon, ArrowRightIcon, StarIcon } from '@/components/ui/icons'
 
 import type { MediaDetailItem } from '@/lib/media/types'
 import { cn } from '@/lib/utils'

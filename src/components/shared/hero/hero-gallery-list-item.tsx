@@ -3,9 +3,8 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-import { Button } from '@/components/ui/button'
-import { PlayIcon } from '@/components/ui/icons/play-icon'
-import { Switcher } from '@/components/ui/switcher'
+import { Button, Switcher } from '@/components/ui'
+import { PlayIcon } from '@/components/ui/icons'
 
 import { IHeroGalleryItem } from '@/types/sections/hero.interface'
 

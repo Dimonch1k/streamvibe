@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { Badge } from '@/components/ui'
@@ -15,6 +14,7 @@ import type { ICategoryItem } from '@/types/sections/category.interface'
 
 import { cn } from '@/lib/utils'
 
+import { CategoryListItemImage } from './category-list-item-image'
 import { CategoryListItemRating } from './category-list-item-rating'
 
 export interface CategoryListItemProps {
@@ -41,14 +41,10 @@ export function CategoryListItem({
 					className
 				)}
 			>
-				<Image
-					unoptimized
-					src={item.image}
-					alt={item.title || item.image}
-					width={235}
-					height={252}
-					className='w-full h-full object-cover'
-					draggable={false}
+				<CategoryListItemImage
+					key={item.image}
+					image={item.image}
+					title={item.title}
 				/>
 
 				<div className='flex justify-between items-center gap-1'>

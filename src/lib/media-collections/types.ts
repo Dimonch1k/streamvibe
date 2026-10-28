@@ -11,6 +11,8 @@ export interface MediaCollectionMediaItem {
 	slug: string
 	title: string
 	description: string | null
+	trailerUrl: string | null
+	videoUrl: string | null
 	posterPath: string
 	backdropPath: string | null
 	durationMinutes: number | null

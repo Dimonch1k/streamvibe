@@ -66,7 +66,7 @@ export async function getMediaCollections(): Promise<MediaCollectionItem[]> {
 		supabase
 			.from('media')
 			.select(
-				'id,slug,title,description,poster_path,backdrop_path,duration_minutes,views_count,released_at,type'
+				'id,slug,title,description,trailer_url,video_url,poster_path,backdrop_path,duration_minutes,views_count,released_at,type'
 			)
 			.in('id', mediaIds)
 			.eq('is_published', true),
@@ -120,6 +120,8 @@ export async function getMediaCollections(): Promise<MediaCollectionItem[]> {
 			slug: media.slug,
 			title: media.title,
 			description: media.description,
+			trailerUrl: media.trailer_url,
+			videoUrl: media.video_url,
 			posterPath: media.poster_path,
 			backdropPath: media.backdrop_path,
 			durationMinutes: media.duration_minutes,

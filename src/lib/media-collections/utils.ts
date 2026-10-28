@@ -147,6 +147,7 @@ export function toHeroGalleryItems(
 		href: getMediaHref(item),
 		image: getImageUrl(item.backdropPath || item.posterPath, item.title),
 		title: item.title,
-		description: item.description || ''
+		description: item.description || '',
+		videoUrl: item.videoUrl || item.trailerUrl
 	}))
 }
